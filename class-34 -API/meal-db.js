@@ -18,8 +18,7 @@ const searchBtn = () =>{
  const displayResult = meals =>{
      
     const displayResult=document.getElementById("show-result")
-    displayResult.innerHTML=' ';
-    
+    displayResult.innerHTML=' ';    
         meals.forEach(meal => {
             // console.log(meal)
            
@@ -47,7 +46,8 @@ const searchBtn = () =>{
  }
  const showDetail = details =>{
     
-    const showDetailField=document.getElementById("show-details")    
+    const showDetailField=document.getElementById("show-details") 
+    showDetailField.textContent=" ";
     const divlist =document.createElement("div")
     divlist.classList.add("card")
     console.log(divlist)
@@ -56,7 +56,7 @@ const searchBtn = () =>{
     <div class="card-body">    
       <h5 class="card-title">${details.idMeal}</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">${details}</a>
+      <a href="${details.strYoutube}" class="btn btn-primary"> Details video</a>
     </div>
     `
     console.log(details)
